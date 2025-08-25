@@ -1,0 +1,123 @@
+site_name: PyThermoNomics
+repo_url: https://github.com/TNO/pythermonomics
+theme:
+  name: material
+  logo: logo/logo_PyThermoNomics.png
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.expand
+    - navigation.footer
+    - navigation.sections
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: indigo
+      accent: blue
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: teal
+      accent: lime
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - mike
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src, examples]
+          options:
+            show_source: false
+            show_bases: true
+            show_root_toc_entry: false
+            show_root_heading: true
+            show_root_full_path: true
+            show_root_members_full_path: false
+            heading_level: 2
+            members_order: source
+            show_symbol_type_heading: true
+            separate_signature: true
+            show_signature_annotations: True
+          inventories:
+            - https://docs.python.org/3/objects.inv
+            - https://docs.pydantic.dev/latest/objects.inv
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascript/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# extra:
+#   version:
+#     provider: mike
+
+watch:
+  - src
+
+nav:
+  - Home: index.md
+  - API Reference:
+      - geothermal_economics: api/geothermal_economics.md
+      - cli: api/cli.md
+      - config: api/config.md
+      - energy_model: api/energy_model.md
+      - npv_model: api/npv_model.md
+      - data: api/data.md
+  - InputConfig:
+    - GeothermalEconomicsConfig: api/config/GeothermalEconomicsConfig.md
+    - TechnoEconomicParameters: api/config/TechnoEconomicParameters.md
+    - ReservoirSimulationParameters: api/config/ReservoirSimulationParameters.md
+    - EnergyLossParameters: api/config/EnergyLossParameters.md
+    - WellTrajectories: api/config/WellTrajectory.md
+  - DataHandling:
+    - DeviationFileReader: api/data/DeviationFileReader.md
+    - SimulationModelResults: api/data/SimulationModelResults.md
+    - SimulationDataReader: api/data/SimulationDataReader.md
+    - WellResults: api/data/WellResults.md
+  - Energy Model:
+      - EnergyCalculator: api/energy_model/EnergyCalculator.md
+  - NPV Model:
+      - EconomicsCalculator: api/npv_model/EconomicsCalculator.md
+      - CostModelWell: api/npv_model/CostModelWell.md
+  - Equations:
+    - NPV and LCOE: equations/NpvAndLcoeEquations.md
+  - Input Description:
+    - InputConfigYaml: input_description/InputConfigYaml.md
+    - InputDeviationFiles: input_description/InputDeviationFiles.md
+    - SimulationTimeSeries: input_description/SimulationTimeSeries.md
+  - Output Description:
+    - ColumnNames: output_description/CashflowColumnNames.md
+  - Development Notes:
+    - DevelopmentNotes: development_notes/LimitationsAndAssumptions.md
+  - ExampleDescription:
+    - JupyterNotebook: examples/UseJupyTerNotebook.md

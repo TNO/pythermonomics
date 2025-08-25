@@ -21,7 +21,7 @@ def main():
         ),
         epilog=(
             "Example usage:\n"
-            "  geothermal-calc -c config.yml -i sim_data.csv -d deviations/\n\n"
+            "  pythermonomics -c config.yml -i sim_data.csv -d deviations/\n\n"
             "The configuration file is required. Simulation and deviation files are optional.\n"
             "Results are printed and optionally saved to files (enabled by default)."
         ),

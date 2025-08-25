@@ -42,7 +42,7 @@ python -m pythermonomics.cli -c config.yml -i sim_data.csv -d deviations/ -t tra
 Or, if installed as a script:
 
 ```sh
-geothermal-calc -c config.yml -i sim_data.csv -d deviations/ -t trajectory.yml
+pythermonomics -c config.yml -i sim_data.csv -d deviations/ -t trajectory.yml
 ```
 
 ---

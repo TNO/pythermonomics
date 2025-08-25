@@ -1,6 +1,10 @@
-# geothermal-npv-calc
+<p align="center">
+  <img src="logo/logo_PyThermoNomics.png" alt="PyThermoNomics Logo" width="300"/>
+</p>
 
-Welcome to the geothermal-npv-calc documentation!
+# PyThermoNomics
+
+Welcome to the PyThermoNomics documentation!
 
 This project provides tools for geothermal economics calculations, including Net Present Value (NPV) and Levelized Cost of Energy (LCOE) computations, well simulation, and more.
 
@@ -24,7 +28,7 @@ Explore the API documentation for each module:
 
 ## Getting Started
 
-To get started, see the [README](https://github.com/your-org/geothermal-npv-calc) or browse the API reference above.
+To get started, see the [README](https://github.com/TNO/pythermonomics) or browse the API reference above.
 
 ## Examples
 
