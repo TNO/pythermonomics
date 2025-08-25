@@ -14,5 +14,7 @@ This tool is under active development. The following limitations and assumptions
 - **Other features:**  
   Additional features and improvements—including enhanced error handling, more flexible input formats, and expanded economic modeling—are planned for future updates.
 
+- **Reporting steps and time resolution:**  
+  When using simulation time-series as input (i.e., summary data), reporting steps are currently filtered and clipped to exact integer years from the start of the simulation. This means that only annual values are used in the economic calculations. In future versions, support will be added for arbitrary reporting steps, allowing the full accuracy of the simulation data (e.g., weekly or daily) to be reflected in the economic results.
 
 If you have specific requirements or would like to contribute, please open an issue or pull request on the project repository!
