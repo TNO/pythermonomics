@@ -1,8 +1,10 @@
+<p align="center">
+  <img src="docs/logo/logo_PyThermoNomics.png" alt="PyThermoNomics Logo" width="300"/>
+</p>
+
 # PyThermoNomics
 
 PyThermoNomics is a Python package for techno-economic analysis of geothermal energy projects. It provides tools to compute Net Present Value (NPV), Levelized Cost of Energy (LCOE), and related financial metrics using simulation data, well trajectories, and project configuration.
-
-TODO: EXPAND HERE WHAT PROJECT IT WAS APART OF AND ADD LOGO ETC.
 
 ## Features
 
@@ -16,10 +18,10 @@ TODO: EXPAND HERE WHAT PROJECT IT WAS APART OF AND ADD LOGO ETC.
 
 ## Installation
 
-Install the package from the repository root:
+Install the latest version using pip:
 
 ```sh
-pip install .
+pip install pythermonomics
 ```
 
 ## Optional Dependencies
@@ -27,13 +29,26 @@ pip install .
 - **Documentation:**  
   To build and view the documentation, install with the `docs` extra:
   ```sh
-  pip install .[docs]
+  pip install pythermonomics[docs]
   ```
 - **Testing:**  
   To run tests, install with the `tests` extra:
   ```sh
-  pip install .[tests]
+  pip install pythermonomics[tests]
   ```
+- **Run Jupyter Notebook example:**  
+  To run the notebook example, install with the `notebook` extra:
+  ```sh
+  pip install pythermonomics[notebook]
+  ```
+
+## Install from source
+
+Install the package from the repository root:
+
+```sh
+pip install .
+```
 
 ## Usage
 
@@ -42,7 +57,7 @@ pip install .
 After installation, use the CLI tool:
 
 ```sh
-geothermal-calc -c config.yml -i sim_data.csv -d deviations/ -t trajectory.yml
+pythermonomics -c config.yml -i sim_data.csv -d deviations/ -t trajectory.yml
 ```
 
 See [CLI Documentation](docs/api/cli.md) for all options.
