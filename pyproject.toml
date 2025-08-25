@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pythermonomics"
-version = "0.0.2"
+version = "0.0.3"
 description = "Tools for geothermal techno-economics, including NPV, LCOE, well simulation, and more."
 readme = "README.md"
 requires-python = ">=3.11"
