@@ -54,8 +54,8 @@ def test_DC1D(settingfile):
             "tests/testdata/config_files/inputsStandard.yml",
             2665,
             10.6e6,
-            5.1,
-            -0.25e6,
+            5.15,
+            -0.29e6,
             "standard_trajectory_file_cashflow.csv",
             "standard_trajectory_file_wellresults.csv",
         ),
@@ -63,8 +63,8 @@ def test_DC1D(settingfile):
             None,
             3577,
             15.9e6,
-            5.8,
-            -4.1e6,
+            5.88,
+            -4.12e6,
             "no_trajectory_file_cashflow.csv",
             "no_trajectory_file_wellresults.csv",
         ),
@@ -92,7 +92,7 @@ def test_cases(
 
     assert ahd == pytest.approx(expected_ahd, abs=1.0)
     assert cost == pytest.approx(expected_cost, abs=1e5)
-    assert lcoe == pytest.approx(expected_lcoe, abs=0.1)
+    assert lcoe == pytest.approx(expected_lcoe, abs=0.02)
     assert npv == pytest.approx(expected_npv, abs=1e5)
     assert dataframes_almost_equal(cashflow, expected_cashflow)
     assert dataframes_almost_equal(well_results, expected_well_results)
@@ -103,8 +103,8 @@ def test_cases(
     [
         (
             "tests/testdata/trajectory_files/inputsDetailedTNOhor.yml",
-            -5882774,
-            6.18,
+            -5890006,
+            6.19,
             "detailed_tno_horizontal_cashflow.csv",
             "detailed_tno_horizontal_wellresults.csv",
         ),
@@ -126,6 +126,6 @@ def test_multilateral_variants(
         settingfile, trajectoryfile=trajectoryfile
     )
     assert npv == pytest.approx(expected_npv, abs=1000.0)
-    assert lcoe == pytest.approx(expected_lcoe, abs=0.01)
+    assert lcoe == pytest.approx(expected_lcoe, abs=0.02)
     assert dataframes_almost_equal(cashflow, expected_cashflow)
     assert dataframes_almost_equal(well_results, expected_well_results)

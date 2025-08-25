@@ -209,7 +209,7 @@ class EnergyCalculator:
 
             if self.economics_config.energy_loss_parameters.useheatloss:
                 temploss = self.economics.welltrajectory.trajectoryinput.temploss_all(
-                    Qvols, templist, salinity, wells_and_states
+                    Qvols, templist, salinity, wells_and_states, wellradius=tubedia*0.0254*0.5
                 )
                 for i, w in enumerate(wells_and_states.keys()):
                     if wells_and_states[w] == "prod":
