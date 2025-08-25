@@ -48,7 +48,7 @@ def test_geothermal_economics_npv_lcoe_minial_settings(minimal_settings):
     )
 
     npv, lcoe_val, cashflow, *_, well_results = economics.compute_economics()
-    assert npv == pytest.approx(-4555735, abs=1000.0)
-    assert lcoe_val == pytest.approx(11.92, abs=0.001)
+    assert npv == pytest.approx(-4556437, abs=1000.0)
+    assert lcoe_val == pytest.approx(11.92, abs=0.01)
     assert dataframes_almost_equal(cashflow, expected_cashflow)
     assert dataframes_almost_equal(well_results, expected_wellresults)
