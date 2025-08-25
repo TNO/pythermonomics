@@ -218,9 +218,7 @@ class SimulationDataReader:
 
         for count, year in enumerate(unique_years):
             # Compute distance to the next integer
-            distances = years_array - (
-                year + 0.08
-            )  # 0.08 is a small offset to fit the reporting steps of the OPM example
+            distances = years_array - year
             # Prefer positive distances (just above the integer)
             positive_mask = distances > 0
             if np.any(positive_mask):
@@ -235,6 +233,11 @@ class SimulationDataReader:
             logger.debug(f"Year {year}: selected index {closest_indices[count]}")
 
         filtered = self.data.copy().iloc[closest_indices].reset_index(drop=True)
+
+        # Clip YEARS and DAYS to closests integer values
+        filtered["YEARS"] = unique_years
+        filtered["DAYS"] = filtered["YEARS"] * DAYS_PER_YEAR
+
         logger.debug(
             f"Filtered data shape after whole year selection: {filtered.shape}"
         )
