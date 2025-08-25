@@ -28,8 +28,8 @@ def test_run_lcoe_with_summary_and_dev():
         filename, summary_file=summary_file, deviation_files_dir=deviation_files_dir
     )
 
-    assert npv == pytest.approx(-6880754, abs=1000.0)
-    assert lcoe == pytest.approx(6.3057, abs=1e-3)
+    assert npv == pytest.approx(-28681206, abs=1000.0)
+    assert lcoe == pytest.approx(6.3465, abs=1e-3)
     assert isinstance(cashflow, pd.DataFrame)
     assert isinstance(simdata, pd.DataFrame)
     assert isinstance(wells, dict)

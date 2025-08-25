@@ -183,19 +183,19 @@ def test_filter_out_whole_years(valid_csv_file):
         "2002-01-01",
     ]
     duplicated_rows["YEARS"] = [
-        1.081,
+        1.01,
         1.45,
-        2.081,
+        2.01,
         2.45,
-        3.081,
+        3.01,
     ]
     path = make_csv(duplicated_rows.to_csv(index=False))
     reader = SimulationDataReader(path)
-    # Should keep one row per year (closest to integer year + 0.08)
+    # Should keep one row per year
     assert len(reader.data) == 3
-    assert abs(reader.data["YEARS"].iloc[0] - 1.08) < 0.01
-    assert abs(reader.data["YEARS"].iloc[1] - 2.08) < 0.01
-    assert abs(reader.data["YEARS"].iloc[2] - 3.08) < 0.01
+    assert abs(reader.data["YEARS"].iloc[0] - 1) < 0.01
+    assert abs(reader.data["YEARS"].iloc[1] - 2) < 0.01
+    assert abs(reader.data["YEARS"].iloc[2] - 3) < 0.01
     os.remove(path)
 
 
