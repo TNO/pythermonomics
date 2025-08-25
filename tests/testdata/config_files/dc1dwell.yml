@@ -1,0 +1,31 @@
+# input file for the DC1Dwell simulator
+# based DC1D V15 default parameters, and should result for qvol is 125 m3/h in DP of thermal loop  of 30 bars
+format: 'DC1DWELL'
+# permeability of reservoir
+k: 500
+# thickness of reservoir
+H: 70
+# distance between wells at reservoir
+L: 1700
+# top true vertical depth of reservoir at PRD and INJ well
+tvd: [1500, 1500]
+# temperature of injection and production if -1 it uses   tsurface + (tvd[1]+0.5H) *tgrad ->(10.0 + 1535 * 0.031)
+temp: [ 30.0, -1]
+# salinity of reservoir at wells [ppm]
+salinity: [70000, 70000]
+# skin factor for the wells
+skin: [ 0.5, 2.0]
+# along hole depth to the top of the reservoir used for frictional losses calculation,
+# averaged on DC15 default inputs over the wells, 0.5*H is added
+ahd: [2070, 2070]
+# inner well radius [m] corresponding to 7 inch casing --> 0.5 * 7 * 2.54/100,
+rw: [ 0.0889, 0.0889]
+# roughness in milli inch
+roughness: 1.38
+# overrule the default values of the geothermal gradient
+useheatloss: True
+tgrad : 0.031
+tsurface: 10.0
+
+
+

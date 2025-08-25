@@ -1,0 +1,56 @@
+format: "DETAILEDTNO"
+
+reservoir:
+    basic:
+        top_reservoir_depth_TVD: 2300.0 # m TVD
+        bottom_reservoir_depth_TVD: 2400  # m TVD
+
+well_trajectories:
+   INJ1:
+        main_wellbore:     
+          name: well1
+          wellhead:
+              x: 0
+              y: 0
+          BUR: 3.0 # deg/30m
+          radius: 0.1
+          subs:
+             sub1:
+                x: 400  # for x,y omission will take old x,y
+                y : -300
+                z: -2000  # (-TVD)  to be reached
+                #azim: 120 # azim/dip at new x,y,z,  omitting means construct plane from last azim/dip and new x,y,z, and use dip or pitch to find azim
+                dip: 40 # dip direction
+             sub2:
+               x:  700  # for x,y omission will take old x,y
+               y: -500
+               z: -2200  # (-TVD)  to be reached
+               #azim: 110 # azim/dip at new x,y,z,  omitting means construct plane from last azim/dip and new x,y,z, and use dip or pitch to find azim
+               #dip: 5 # dip direction
+             sub3:
+               dx: 1200  # for x,y omission will take old x,y
+               dy: -200
+               dz: -200  # (-TVD)  to be reached
+               #azim: 110 # azim/dip at new x,y,z,  omitting means construct plane from last azim/dip and new x,y,z, and use dip or pitch to find azim
+               #dip: 5 # dip direction
+             sub4:
+                L: 10
+
+
+   PRD1:
+        main_wellbore:
+          name: well2
+          wellhead:
+              x: 0
+              y: -10
+          BUR: 3.0 # deg/30m
+          radius: 0.1
+          subs:
+             sub1:
+                x: 800  # for x,y omission will take old x,y
+                y : 500
+                z: -2300  # (-TVD)  to be reached
+                azim: 70 # azim/dip at new x,y,z,  omitting means construct plane from last azim/dip and new x,y,z, and use dip or pitch to find azim
+                dip: 5 # dip direction
+             sub2:
+                L: 1000
