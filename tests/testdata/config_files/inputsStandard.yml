@@ -1,0 +1,40 @@
+format: "DETAILEDTNO"
+
+reservoir:
+    basic:
+        top_reservoir_depth_TVD: 2300 # m TVD
+        bottom_reservoir_depth_TVD: 2400  # m TVD
+
+
+well_trajectories:
+    INJ1:
+        main_wellbore:
+          name: well1
+          wellhead:
+              x: 100
+              y: 100
+          BUR: 3.0 # deg/30m
+          radius: 0.1
+          subs:
+            sub1:
+                x: 800 # for x,y omission will take old x,y
+                y: 100 # (-TVD)  to be reac
+                z: -2400
+                azim: 90.0
+                dip: 45.0
+
+    PRD1:
+        main_wellbore:
+          name: well2
+          wellhead:
+              x: 100
+              y: 100
+          BUR: 3.0 # deg/30m
+          radius: 0.1
+          subs:
+            sub1:
+                x: -600 # for x,y omission will take old x,y
+                y: 100 # (-TVD)  to be reac
+                z: -2400
+                azim: 270.0
+                dip: 45.0
