@@ -142,8 +142,8 @@ GNU General Public License v3 (GPLv3)
 This study has been performed as part of the RESULT project (Enhancing REServoirs in Urban deveLopmenT: smart wells and reservoir development). [RESULT](https://www.result-geothermica.eu/home.html) has been subsidized through the ERANET Cofund GEOTHERMICA (EC Project no. 731117), by the Ministry of Economic Affairs and Climate Policy (the Netherlands), Rannis (Iceland) and GSI (Ireland).
 
 <p float="left">
-  <img src="docs/logo/RESULT_LOGO.png" alt="RESULT Logo" width="30%" />
-  <img src="docs/logo/GEOTHERMICA_LOGO.png" alt="GEOTHERMICA Logo" width="50%" />
+  <img src="docs/logo/RESULT_LOGO.png" alt="RESULT Logo" width="15%" />
+  <img src="docs/logo/GEOTHERMICA_LOGO.png" alt="GEOTHERMICA Logo" width="30%" />
 </p>
 
 ---
