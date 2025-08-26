@@ -1,0 +1,36 @@
+energy_loss_parameters:
+    well_roughness:  0.1  # milli inch
+    well_tubing:  7   # production tubing, inch
+
+reservoir_simulation_parameters:
+    injection_temperature: 30 # C
+    salinity: 140000 # ppm , to determine brine heat capacity
+
+techno_economic_parameters:
+    loadhours: 8760 # amount of hours in a year the production as forecasted is operational
+    wellcost_scaling: 1 # scaling factor for wellcost
+    well_curvfac: 1.05   # correction for MD calculated from piecewise linear
+    wellcost_base: 250e3    # base costs for a well EUR
+    wellcost_linear:  1000   # cost EUR per meter MD
+    wellcost_cube:   0.25 # cost EUR per meter^2  MD
+    pump_efficiency: 0.65 # unitless
+    pump_cost: 0.5e6  #  for single pump
+    pump_life: 5 # years
+    CAPEX_base: 3e6  # base costs for the heat conversion
+    CAPEX_variable: 400 # variable costs EUR per kWth installed
+    CAPEX_contingency: 0.2 # capex contigency applied to capex and well costs
+    OPEX_base: 20  # kEUR/y
+    OPEX_variable: 70  # variable costs EUR per kWth installed
+    equity_share: 0.2     # fraction of equity in project financing
+    loan_nyear: 15  # loan # years
+    loan_rate : 0.05  # loan rate
+    discount_rate: 0.15  # discount rate for equity share
+    inflation_rate: 0.02  # discount rate for equity share
+    tax_rate: 0.25  # taxrate
+    tax_depreciation_nyear: 15
+    heat_price: 5  # EURct/kWh
+    heat_price_feedin: 6  # heat price for subsidy years EURct/kWh
+    electricity_price:  8  # EURct/kWh
+    subsidy_years: 15
+    lifecycle_years: 30
+
