@@ -36,13 +36,13 @@ Parses command-line arguments, sets up logging, and runs the NPV/LCOE calculatio
 After installing the package, run:
 
 ```sh
-python -m pythermonomics.cli -c config.yml -i sim_data.csv -d deviations/ -t trajectory.yml
+python -m pythermonomics.cli -c config.yml -i sim_data.csv -d deviations/
 ```
 
 Or, if installed as a script:
 
 ```sh
-pythermonomics -c config.yml -i sim_data.csv -d deviations/ -t trajectory.yml
+pythermonomics -c config.yml -i sim_data.csv -d deviations/
 ```
 
 ---
