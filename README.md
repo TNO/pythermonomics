@@ -139,7 +139,7 @@ GNU General Public License v3 (GPLv3)
 
 ## Contact information
 
-Stephan de Hoop - stephan.dehoop@tno.nl
+Stephan de Hoop (stephan.dehoop@tno.nl)
 
 ## Acknowledgements
 
